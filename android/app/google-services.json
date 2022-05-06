@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "172127626129",
+    "project_id": "hunger-station-e5cef",
+    "storage_bucket": "hunger-station-e5cef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172127626129:android:170a5f83ac739564cfb030",
+        "android_client_info": {
+          "package_name": "com.example.hunger_station_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172127626129-rj0s6dnsp97starso156aq3uctjqj86g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK4Gn_dwPCoHBZY5zasXUOnyESnxX46L8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172127626129-rj0s6dnsp97starso156aq3uctjqj86g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
