@@ -67,6 +67,7 @@ class HomeScreen extends StatelessWidget {
                             description: 'Explore our markets',
                             color: Colors.blueAccent,
                             textColors: Colors.white,
+                            onTap: () {},
                           ),
                         )
                       ],
@@ -78,6 +79,7 @@ class HomeScreen extends StatelessWidget {
                         title: 'Your donation Matters',
                         description: 'Donate to various charities',
                         color: Colors.lightBlueAccent,
+                        onTap: () {},
                       ),
                     ),
                     const Spacing().spacingY18,

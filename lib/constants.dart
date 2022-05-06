@@ -52,3 +52,52 @@ class Spacing {
 
   const Spacing();
 }
+
+// Rounded
+class Rounded {
+  final rounded1 = const Radius.circular(2);
+  final rounded2 = const Radius.circular(4);
+  final rounded3 = const Radius.circular(8);
+  final rounded4 = const Radius.circular(16);
+  final rounded5 = const Radius.circular(24);
+  final rounded6 = const Radius.circular(32);
+  final rounded7 = const Radius.circular(40);
+  final rounded8 = const Radius.circular(48);
+  final rounded9 = const Radius.circular(56);
+  final rounded10 = const Radius.circular(64);
+  final rounded11 = const Radius.circular(72);
+  final rounded12 = const Radius.circular(80);
+  final rounded13 = const Radius.circular(88);
+  final rounded14 = const Radius.circular(96);
+
+  const Rounded();
+}
+
+class AppPaddings {
+  final padding1 = const EdgeInsets.all(2);
+  final padding2 = const EdgeInsets.all(4);
+  final padding3 = const EdgeInsets.all(8);
+  final padding4 = const EdgeInsets.all(12);
+  final padding5 = const EdgeInsets.all(16);
+  final padding6 = const EdgeInsets.all(20);
+  final padding7 = const EdgeInsets.all(24);
+  final padding8 = const EdgeInsets.all(28);
+
+  final paddingX1 = const EdgeInsets.symmetric(horizontal: 2);
+  final paddingX2 = const EdgeInsets.symmetric(horizontal: 4);
+  final paddingX3 = const EdgeInsets.symmetric(horizontal: 8);
+  final paddingX4 = const EdgeInsets.symmetric(horizontal: 12);
+  final paddingX5 = const EdgeInsets.symmetric(horizontal: 16);
+  final paddingX6 = const EdgeInsets.symmetric(horizontal: 20);
+  final paddingX7 = const EdgeInsets.symmetric(horizontal: 24);
+  final paddingX8 = const EdgeInsets.symmetric(horizontal: 28);
+
+  final paddingY1 = const EdgeInsets.symmetric(vertical: 2);
+  final paddingY2 = const EdgeInsets.symmetric(vertical: 4);
+  final paddingY3 = const EdgeInsets.symmetric(vertical: 8);
+  final paddingY4 = const EdgeInsets.symmetric(vertical: 12);
+  final paddingY5 = const EdgeInsets.symmetric(vertical: 16);
+  final paddingY6 = const EdgeInsets.symmetric(vertical: 20);
+  final paddingY7 = const EdgeInsets.symmetric(vertical: 24);
+  final paddingY8 = const EdgeInsets.symmetric(vertical: 28);
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hunger_station_clone/constants.dart';
 
 class ImageConfig {
   final double? height;
@@ -43,7 +44,7 @@ class CardBanner extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.all(const Rounded().rounded2),
       ),
       child: Stack(
         children: [
@@ -63,7 +64,7 @@ class CardBanner extends StatelessWidget {
                 )
               : SizedBox(),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: AppPaddings().padding3,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
