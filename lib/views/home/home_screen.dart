@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hunger_station_clone/constants.dart';
 import 'package:hunger_station_clone/views/food/food_screen.dart';
 import 'package:hunger_station_clone/views/home/appbar/header.dart';
 import 'package:hunger_station_clone/widgets/card_banner.dart';
@@ -27,14 +28,14 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    HungTextField(),
-                    SizedBox(height: 16),
-                    Text(
+                    const HungTextField(),
+                    const Spacing().spacingY4,
+                    const Text(
                       'What would you like to order?',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          fontSize: 16, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 16),
+                    const Spacing().spacingY4,
                     Row(
                       children: [
                         Expanded(
@@ -53,23 +54,24 @@ class HomeScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => FoodScreen(),
+                                  builder: (context) => const FoodScreen(),
                                 ),
                               );
                             },
                           ),
                         ),
-                        SizedBox(width: 16),
+                        const Spacing().spacingX4,
                         Expanded(
-                            child: CardBanner(
-                          title: 'Quick Market',
-                          description: 'Explore our markets',
-                          color: Colors.blueAccent,
-                          textColors: Colors.white,
-                        ))
+                          child: CardBanner(
+                            title: 'Quick Market',
+                            description: 'Explore our markets',
+                            color: Colors.blueAccent,
+                            textColors: Colors.white,
+                          ),
+                        )
                       ],
                     ),
-                    SizedBox(height: 16),
+                    const Spacing().spacingY4,
                     SizedBox(
                       width: MediaQuery.of(context).size.width,
                       child: CardBanner(
@@ -78,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.lightBlueAccent,
                       ),
                     ),
-                    SizedBox(height: 128),
+                    const Spacing().spacingY18,
                     Opacity(
                       opacity: .3,
                       child: Center(

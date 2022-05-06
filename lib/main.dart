@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:hunger_station_clone/constants.dart';
 import 'package:hunger_station_clone/firebase_options.dart';
 import 'package:hunger_station_clone/util/run_app.dart';
 import 'package:hunger_station_clone/views/page_wrapper.dart';
@@ -18,36 +19,36 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.white,
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
-          foregroundColor: Color(0xFF582a16),
+          foregroundColor: const AppColors().primaryColor,
         ),
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.white,
           selectedIconTheme: IconThemeData(
-            color: Color(0xCCFFD709),
+            color: const AppColors().secondaryColor,
           ),
           unselectedIconTheme: IconThemeData(
-            color: Colors.black45,
+            color: const AppColors().black.withOpacity(.2),
           ),
           selectedLabelStyle: TextStyle(
-            color: Color(0xFF582a16),
+            color: const AppColors().primaryColor,
             fontWeight: FontWeight.bold,
             fontSize: 12,
           ),
           unselectedLabelStyle: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: const AppColors().black,
             fontSize: 12,
           ),
         ),
-        primaryColor: const Color(0xFF582a16),
-        colorScheme: const ColorScheme.light(
-          secondary: Color(0xCCFFD709),
-          primary: Color(0xFF582a16),
+        primaryColor: const AppColors().primaryColor,
+        colorScheme: ColorScheme.light(
+          secondary: const AppColors().secondaryColor,
+          primary: const AppColors().primaryColor,
         ),
-        iconTheme: const IconThemeData(
-          color: Color(0xFF582a16),
+        iconTheme: IconThemeData(
+          color: const AppColors().primaryColor,
         ),
       ),
       home: const PageWrapper(),
