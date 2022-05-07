@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hunger_station_clone/constants.dart';
+import 'package:hunger_station_clone/models/category.dart';
 import 'package:hunger_station_clone/services/restaurant_services.dart';
 import 'package:hunger_station_clone/views/food/states/restaurants_ref.dart';
+import 'package:hunger_station_clone/views/food/widgets/category_header.dart';
+import 'package:hunger_station_clone/views/food/widgets/category_tag.dart';
 import 'package:hunger_station_clone/views/food/widgets/food_header.dart';
 import 'package:hunger_station_clone/views/food/widgets/restaurant_card.dart';
 import 'package:hunger_station_clone/widgets/hung_text_field.dart';
@@ -33,12 +36,12 @@ class FoodScreen extends ConsumerWidget {
             SliverPersistentHeader(
               delegate: FoodHeader(),
             ),
+            SliverPersistentHeader(delegate: CategoryHeader(), pinned: true),
             SliverToBoxAdapter(
                 child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
+              padding: AppPaddings().paddingX5,
               child: Column(
                 children: [
-                  Spacing().spacingY3,
                   Column(
                     children: resRef.when(
                       data: (data) {

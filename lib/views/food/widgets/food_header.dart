@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hunger_station_clone/constants.dart';
 import 'package:hunger_station_clone/views/food/widgets/food_card.dart';
 import 'package:hunger_station_clone/widgets/hung_text_field.dart';
@@ -19,28 +20,50 @@ class FoodHeader extends SliverPersistentHeaderDelegate {
             child: const HungTextField(),
           ),
           Positioned(
-            top: 64,
+            top: 56,
             child: SizedBox(
-              height: 130,
+              height: 100,
               width: MediaQuery.of(context).size.width,
-              child: ListView.builder(
+              child: ListView(
                 scrollDirection: Axis.horizontal,
-                padding: AppPaddings().paddingX3,
-                itemCount: 10,
-                itemBuilder: (context, index) => FoodCard(
-                  margin: AppPaddings().paddingX3,
-                  width: 130,
-                  color: Colors.blue,
-                  child: Center(
-                    child: Text(
-                      'Eid Deals',
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                padding: AppPaddings().paddingX4,
+                children: [
+                  FoodCard(
+                    margin: AppPaddings().paddingX2,
+                    width: 100,
+                    color: Colors.blue,
+                    child: Padding(
+                      padding: AppPaddings().padding6,
+                      child: Center(
+                          child:
+                              SvgPicture.asset("assets/images/poster-01.svg")),
                     ),
                   ),
-                ),
+                  FoodCard(
+                    margin: AppPaddings().paddingX2,
+                    width: 100,
+                    color: AppColors().secondaryColor,
+                    child: Padding(
+                      padding: AppPaddings().padding4.copyWith(left: 18),
+                      child: Center(
+                          child:
+                              SvgPicture.asset("assets/images/poster-02.svg")),
+                    ),
+                  ),
+                  FoodCard(
+                    margin: AppPaddings().paddingX2,
+                    width: 100,
+                    color: Colors.red,
+                    child: Padding(
+                      padding: AppPaddings().padding1.copyWith(
+                            bottom: 0,
+                          ),
+                      child: Center(
+                          child: SvgPicture.asset(
+                              "assets/images/poster-03-01.svg")),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -50,7 +73,7 @@ class FoodHeader extends SliverPersistentHeaderDelegate {
   }
 
   @override
-  double get maxExtent => 210;
+  double get maxExtent => 156;
 
   @override
   double get minExtent => 0;

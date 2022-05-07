@@ -55,22 +55,22 @@ class Spacing {
 
 // Rounded
 class Rounded {
-  final rounded1 = const Radius.circular(2);
-  final rounded2 = const Radius.circular(4);
-  final rounded3 = const Radius.circular(8);
-  final rounded4 = const Radius.circular(16);
-  final rounded5 = const Radius.circular(24);
-  final rounded6 = const Radius.circular(32);
-  final rounded7 = const Radius.circular(40);
-  final rounded8 = const Radius.circular(48);
-  final rounded9 = const Radius.circular(56);
-  final rounded10 = const Radius.circular(64);
-  final rounded11 = const Radius.circular(72);
-  final rounded12 = const Radius.circular(80);
-  final rounded13 = const Radius.circular(88);
-  final rounded14 = const Radius.circular(96);
+  static const circular1 = const Radius.circular(2);
+  static const circular2 = const Radius.circular(4);
+  static const circular3 = const Radius.circular(8);
+  static const circular4 = const Radius.circular(16);
+  static const circular5 = const Radius.circular(24);
+  static const circular6 = const Radius.circular(32);
+  static const circular7 = const Radius.circular(40);
+  static const circular8 = const Radius.circular(48);
+  static const circular9 = const Radius.circular(56);
+  static const circular10 = const Radius.circular(64);
+  static const circular11 = const Radius.circular(72);
+  static const circular12 = const Radius.circular(80);
+  static const circular13 = const Radius.circular(88);
+  static const circular14 = const Radius.circular(96);
 
-  const Rounded();
+  Rounded._();
 }
 
 class AppPaddings {

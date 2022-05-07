@@ -44,7 +44,7 @@ class CardBanner extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.all(const Rounded().rounded2),
+        borderRadius: const BorderRadius.all(Rounded.circular2),
       ),
       child: Stack(
         children: [

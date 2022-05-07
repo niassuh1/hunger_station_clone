@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hunger_station_clone/constants.dart';
 import 'package:hunger_station_clone/models/restaurant.dart';
+import 'package:hunger_station_clone/widgets/text_icon.dart';
 
 class RestaurantCard extends StatelessWidget {
   final Restaurant? restaurant;
@@ -14,7 +15,7 @@ class RestaurantCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.all(Rounded().rounded3),
+          borderRadius: BorderRadius.all(Rounded.circular3),
           boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 6)]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,10 +31,13 @@ class RestaurantCard extends StatelessWidget {
               Positioned(
                 top: 10,
                 left: 10,
-                child: Image(
-                  width: 50,
-                  height: 50,
-                  image: NetworkImage(restaurant!.logo),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Rounded.circular3),
+                  child: Image(
+                    width: 50,
+                    height: 50,
+                    image: NetworkImage(restaurant!.logo),
+                  ),
                 ),
               ),
             ],
@@ -56,37 +60,17 @@ class RestaurantCard extends StatelessWidget {
                 IntrinsicHeight(
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.watch_later_outlined,
-                        size: 16,
-                        color: Colors.black,
-                      ),
-                      Spacing().spacingX2,
-                      Text(
-                        '${restaurant!.duration.toString()} Minutes',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      TextIcon(
+                          text: '${restaurant!.duration.toString()} Minutes',
+                          iconData: Icons.watch_later_outlined),
                       VerticalDivider(),
                       restaurant!.liveTracking
-                          ? Icon(
-                              Icons.track_changes_rounded,
-                              size: 16,
+                          ? TextIcon(
+                              text: 'Live Tracking',
+                              iconData: Icons.track_changes_rounded,
                               color: Colors.greenAccent[700],
                             )
                           : SizedBox(),
-                      Spacing().spacingX2,
-                      restaurant!.liveTracking
-                          ? Text(
-                              'Live Tracking',
-                              style: TextStyle(
-                                color: Colors.greenAccent[700],
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          : SizedBox()
                     ],
                   ),
                 ),

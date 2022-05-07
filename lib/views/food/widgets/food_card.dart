@@ -23,7 +23,7 @@ class FoodCard extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(const Rounded().rounded2),
+        borderRadius: BorderRadius.all(Rounded.circular2),
         color: color ?? Colors.white,
       ),
       child: child,
